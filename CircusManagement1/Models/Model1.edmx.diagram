@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84176407c80f4a308e83e732d7d66e37" Name="Diagram1">
+        <EntityTypeShape EntityType="CircusDBModel.Animal" Width="1.5" PointX="7.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Artist" Width="1.5" PointX="7.5" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Employee" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Event" Width="1.5" PointX="7.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.HologramCabinet" Width="2.375" PointX="0.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Report" Width="1.5" PointX="9.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Room" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.SubZone" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Training" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CircusDBModel.Zone" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="CircusDBModel.FK__Animal__cage_id__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__Animal__trainer___4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__Artist__artist_i__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__Event__room_id__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__Room__subzone_id__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__Training__room_i__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.FK__SubZone__zone_id__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.HologramResponsible" ManuallyRouted="false" />
+        <AssociationConnector Association="CircusDBModel.ReportEvent" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
