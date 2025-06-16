@@ -134,7 +134,6 @@
     <Compile Include="Views\AnimalsPage.xaml.cs">
       <DependentUpon>AnimalsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Artist.cs" />
     <Compile Include="Views\ArtistsPage.xaml.cs">
       <DependentUpon>ArtistsPage.xaml</DependentUpon>
     </Compile>

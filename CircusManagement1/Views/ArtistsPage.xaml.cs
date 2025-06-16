@@ -44,34 +44,11 @@ namespace CircusManagement1.Views
             }
         }
 
-        private void AddArtist_Click(object sender, RoutedEventArgs e)
-        {
-            var newArtist = new Artist
-            {
-                Name = "Новый артист",
-                Specialty = "Дрессировщик",
-                Experience = 1
-            };
-
-            try
-            {
-                App.CircusModel.Artists.Add(newArtist);
-                App.CircusModel.SaveChanges();
-                LoadArtists();
-                artistsGrid.ScrollIntoView(newArtist);
-                artistsGrid.SelectedItem = newArtist;
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show($"Ошибка добавления: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
         private void EditArtist_Click(object sender, RoutedEventArgs e)
         {
-            if (artistsGrid.SelectedItem is Artist selectedArtist)
+            if (artistsGrid.SelectedItem is Artist selected)
             {
-                var dialog = new ArtistEditDialog(selectedArtist);
+                var dialog = new ArtistEditDialog(selected);
                 if (dialog.ShowDialog() == true)
                 {
                     try
@@ -93,13 +70,13 @@ namespace CircusManagement1.Views
 
         private void DeleteArtist_Click(object sender, RoutedEventArgs e)
         {
-            if (artistsGrid.SelectedItem is Artist selectedArtist)
+            if (artistsGrid.SelectedItem is Artist selectedA)
             {
                 if (MessageBox.Show("Удалить этого артиста?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     try
                     {
-                        App.CircusModel.Artists.Remove(selectedArtist);
+                        App.CircusModel.Artists.Remove(selectedA);
                         App.CircusModel.SaveChanges();
                         LoadArtists();
                     }
